@@ -4,7 +4,7 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
+<h1>Editar</h1>
 
 <h4>Cliente</h4>
 <hr />
@@ -14,27 +14,27 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="CliId" />
             <div class="form-group">
-                <label asp-for="CliNombre" class="control-label"></label>
+                <label asp-for="CliNombre" class="control-label">Nombre</label>
                 <input asp-for="CliNombre" class="form-control" />
                 <span asp-validation-for="CliNombre" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="CliApellido" class="control-label"></label>
+                <label asp-for="CliApellido" class="control-label">Apellido</label>
                 <input asp-for="CliApellido" class="form-control" />
                 <span asp-validation-for="CliApellido" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="CliEmail" class="control-label"></label>
+                <label asp-for="CliEmail" class="control-label">Email</label>
                 <input asp-for="CliEmail" class="form-control" />
                 <span asp-validation-for="CliEmail" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="MedId" class="control-label"></label>
+                <label asp-for="MedId" class="control-label">Medico de cabecera</label>
                 <input asp-for="MedId" class="form-control" />
                 <span asp-validation-for="MedId" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="MutId" class="control-label"></label>
+                <label asp-for="MutId" class="control-label">Mutual</label>
                 <input asp-for="MutId" class="form-control" />
                 <span asp-validation-for="MutId" class="text-danger"></span>
             </div>

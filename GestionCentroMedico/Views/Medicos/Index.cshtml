@@ -7,25 +7,25 @@
 <h1>Index</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Crear nuevo</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.MedNombre)
+                @*@Html.DisplayNameFor(model => model.MedNombre)*@Nombre
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.MedApellido)
+                @*@Html.DisplayNameFor(model => model.MedApellido)*@Apellido
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.MedEspecialidad)
+                @*@Html.DisplayNameFor(model => model.MedEspecialidad)*@Especialidad
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.MedMatricula)
+                @*@Html.DisplayNameFor(model => model.MedMatricula)*@Matricula
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.MedActivo)
+                @*@Html.DisplayNameFor(model => model.MedActivo)*@Activo
             </th>
             <th></th>
         </tr>
@@ -49,9 +49,9 @@
                 @Html.DisplayFor(modelItem => item.MedActivo)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.MedId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.MedId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.MedId">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.MedId">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.MedId">Detalles</a> |
+                <a asp-action="Delete" asp-route-id="@item.MedId">Eliminar</a>
             </td>
         </tr>
 }

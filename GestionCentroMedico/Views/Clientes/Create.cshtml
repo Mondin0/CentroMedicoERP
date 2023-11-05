@@ -4,7 +4,7 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<h1>Crear</h1>
 
 <h4>Cliente</h4>
 <hr />
@@ -13,26 +13,26 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="CliNombre" class="control-label"></label>
+                <label asp-for="CliNombre" class="control-label">Nombre</label>
                 <input asp-for="CliNombre" class="form-control" />
                 <span asp-validation-for="CliNombre" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="CliApellido" class="control-label"></label>
+                <label asp-for="CliApellido" class="control-label">Apellido</label>
                 <input asp-for="CliApellido" class="form-control" />
                 <span asp-validation-for="CliApellido" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="CliEmail" class="control-label"></label>
+                <label asp-for="CliEmail" class="control-label">Email</label>
                 <input asp-for="CliEmail" class="form-control" />
                 <span asp-validation-for="CliEmail" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="MedId" class="control-label"></label>
+                <label asp-for="MedId" class="control-label">Medico de cabecera</label>
                 <select asp-for="MedId" class="form-control" asp-items="ViewBag.MedId"></select>
             </div>
             <div class="form-group">
-                <label asp-for="MutId" class="control-label"></label>
+                <label asp-for="MutId" class="control-label">Mutual</label>
                 <select asp-for="MutId" class="form-control" asp-items="ViewBag.MutId"></select>
             </div>
             <div class="form-group form-check">

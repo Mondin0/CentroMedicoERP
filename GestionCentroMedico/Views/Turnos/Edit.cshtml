@@ -4,7 +4,7 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
+<h1>Editar</h1>
 
 <h4>Turno</h4>
 <hr />
@@ -14,27 +14,27 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="TurId" />
             <div class="form-group">
-                <label asp-for="CliId" class="control-label"></label>
+                <label asp-for="CliId" class="control-label">Cliente</label>
                 <select asp-for="CliId" class="form-control" asp-items="ViewBag.CliId"></select>
                 <span asp-validation-for="CliId" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="MedId" class="control-label"></label>
+                <label asp-for="MedId" class="control-label">Medico</label>
                 <select asp-for="MedId" class="form-control" asp-items="ViewBag.MedId"></select>
                 <span asp-validation-for="MedId" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="MutId" class="control-label"></label>
+                <label asp-for="MutId" class="control-label">Mutual</label>
                 <select asp-for="MutId" class="form-control" asp-items="ViewBag.MutId"></select>
                 <span asp-validation-for="MutId" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="TurFecha" class="control-label"></label>
+                <label asp-for="TurFecha" class="control-label">Fecha</label>
                 <input asp-for="TurFecha" class="form-control" />
                 <span asp-validation-for="TurFecha" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="TurValor" class="control-label"></label>
+                <label asp-for="TurValor" class="control-label">Valor del turno</label>
                 <input asp-for="TurValor" class="form-control" />
                 <span asp-validation-for="TurValor" class="text-danger"></span>
             </div>
