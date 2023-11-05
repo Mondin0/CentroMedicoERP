@@ -1,0 +1,60 @@
+﻿@model GestionCentroMedico.Models.Turno
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Turno</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TurFecha)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TurFecha)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TurValor)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TurValor)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TurPagoEfectivo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TurPagoEfectivo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TurDescuentaPrepaga)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TurDescuentaPrepaga)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Cli)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Cli.CliId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Med)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Med.MedId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Mut)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Mut.MutId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.TurId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

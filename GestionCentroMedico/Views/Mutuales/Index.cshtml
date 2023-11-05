@@ -1,0 +1,53 @@
+﻿@model IEnumerable<GestionCentroMedico.Models.Mutual>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MutNombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MutDescripcion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MutValor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MutActivo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MutNombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MutDescripcion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MutValor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MutActivo)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.MutId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.MutId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.MutId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
