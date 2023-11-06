@@ -4,7 +4,7 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Turnos</h1>
 
 <p>
     <a asp-action="Create">Crear nuevo turno</a>
@@ -65,9 +65,9 @@
                     @Html.DisplayFor(modelItem => item.Mut.MutNombre)
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.TurId">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.TurId">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.TurId">Delete</a>
+                    <a asp-action="Edit" asp-route-id="@item.TurId">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.TurId">Detalles</a> |
+                    <a asp-action="Delete" asp-route-id="@item.TurId">Eliminar</a>
                 </td>
             </tr>
         }

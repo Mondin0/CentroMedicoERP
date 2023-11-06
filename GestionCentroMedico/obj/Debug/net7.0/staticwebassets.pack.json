@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\gabmo\\OneDrive\\Escritorio\\3ro software\\sistemas web\\final\\GestionCentroMedico\\GestionCentroMedico\\wwwroot\\img\\home.png",
+      "PackagePath": "staticwebassets\\img\\home.png"
+    },
+    {
       "Id": "C:\\Users\\gabmo\\OneDrive\\Escritorio\\3ro software\\sistemas web\\final\\GestionCentroMedico\\GestionCentroMedico\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

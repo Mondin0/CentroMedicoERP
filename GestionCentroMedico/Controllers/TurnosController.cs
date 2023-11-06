@@ -78,7 +78,7 @@ namespace GestionCentroMedico.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("TurId,CliId,MedId,MutId,TurFecha,TurValor,TurPagoEfectivo,TurDescuentaPrepaga")] Turno turno)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 _context.Add(turno);
                 await _context.SaveChangesAsync();
