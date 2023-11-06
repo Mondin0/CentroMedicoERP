@@ -20,3 +20,38 @@ html {
 body {
   margin-bottom: 60px;
 }
+.carousel-item img {
+    width: 50%; /* Establece el ancho al 100% del contenedor */
+    height: auto; /* Ajusta automáticamente la altura para mantener la proporción original */
+}
+
+/**/
+
+#myCarousel {
+    width: 80%; /* Ancho del carrusel */
+    margin: 0 auto; /* Centra el carrusel horizontalmente */
+}
+.img-center {
+    display: block;
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+/* Estilo para las imágenes */
+.carousel-inner img {
+    width: 100%; /* Ajusta el ancho al 100% del contenedor */
+    height: auto; /* Ajusta automáticamente la altura para mantener la proporción original */
+    border: 2px solid #fff; /* Agrega un borde blanco a las imágenes */
+    border-radius: 10px; /* Aplica un borde redondeado */
+}
+
+/* Estilo para los controles del carrusel */
+.carousel-control-prev, .carousel-control-next {
+    background-color: #333; /* Color de fondo de los controles */
+    opacity: 0.7; /* Opacidad de los controles */
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: #fff; /* Color del icono de los controles */
+    border-radius: 50%; /* Hace que el icono sea circular */
+    color: #333; /* Color del icono de los controles */
+}
