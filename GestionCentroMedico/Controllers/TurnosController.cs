@@ -6,9 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using GestionCentroMedico.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace GestionCentroMedico.Controllers
 {
+    [Authorize]
     public class TurnosController : Controller
     {
         private readonly GestionTurnosContext _context;
@@ -86,6 +88,7 @@ namespace GestionCentroMedico.Controllers
             }
             _context.Add(turno);
             await _context.SaveChangesAsync();
+
             ViewData["CliId"] = new SelectList(_context.Clientes, "CliId", "CliId", turno.CliId);
             ViewData["MedId"] = new SelectList(_context.Medicos, "MedId", "MedId", turno.MedId);
             ViewData["MutId"] = new SelectList(_context.Mutuales, "MutId", "MutId", turno.MutId);
@@ -105,9 +108,24 @@ namespace GestionCentroMedico.Controllers
             {
                 return NotFound();
             }
-            ViewData["CliId"] = new SelectList(_context.Clientes, "CliId", "CliId", turno.CliId);
-            ViewData["MedId"] = new SelectList(_context.Medicos, "MedId", "MedId", turno.MedId);
-            ViewData["MutId"] = new SelectList(_context.Mutuales, "MutId", "MutId", turno.MutId);
+
+            ViewData["CliId"] = new SelectList(
+                _context.Set<Cliente>()
+                .Select(cliente => new
+                {
+                    cliente.CliId,
+                    CliNombreCompleto = $"{cliente.CliApellido}, {cliente.CliNombre}"
+                }),
+                "CliId", "CliNombreCompleto");
+            ViewData["MedId"] = new SelectList(
+                _context.Set<Medico>()
+                .Select(medico => new
+                {
+                    medico.MedId,
+                    MedNombreCompleto = $"{medico.MedApellido}, {medico.MedNombre}"
+                }),
+                "MedId", "MedNombreCompleto");
+            ViewData["MutId"] = new SelectList(_context.Mutuales, "MutId", "MutNombre");
             return View(turno);
         }
 
@@ -118,12 +136,12 @@ namespace GestionCentroMedico.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("TurId,CliId,MedId,MutId,TurFecha,TurValor,TurPagoEfectivo,TurDescuentaPrepaga")] Turno turno)
         {
-            if (id != turno.TurId)
-            {
-                return NotFound();
-            }
+            //if (id != turno.TurId)
+            //{
+            //    return NotFound();
+            //}
 
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 try
                 {

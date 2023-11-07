@@ -55,3 +55,52 @@ body {
     border-radius: 50%; /* Hace que el icono sea circular */
     color: #333; /* Color del icono de los controles */
 }
+
+@media( max-width: 980px) {
+    .login {
+        justify-content: flex-end;
+    }
+}
+
+
+.btn-salir:hover {
+    background: #0D0F44;
+    transform: scale(1.05);
+    transition: linear .2s;
+}
+
+.btn-salir {
+    background-image: linear-gradient( 150deg, #0D0F44, #0D0F44 );
+}
+
+h4 {
+    transform: translateX(100px);
+}
+
+.usuario {
+    font-size: 20px;
+}
+
+.btn-inicio:hover {
+    transform: scale(1.02);
+    transition: linear .2s;
+}
+
+.div-inicio {
+    display: flex;
+    align-items: flex-end;
+}
+
+@media( max-width: 980px) {
+    .login {
+        justify-content: flex-end;
+    }
+}
+
+@media (width: 320px) {
+
+
+    .btn-inicio {
+        visibility: hidden;
+    }
+}

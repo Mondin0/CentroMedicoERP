@@ -6,9 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using GestionCentroMedico.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace GestionCentroMedico.Controllers
 {
+    [Authorize]
     public class MedicosController : Controller
     {
         private readonly GestionTurnosContext _context;

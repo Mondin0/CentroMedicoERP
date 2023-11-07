@@ -6,9 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using GestionCentroMedico.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace GestionCentroMedico.Controllers
 {
+    [Authorize]
     public class ClientesController : Controller
     {
         private readonly GestionTurnosContext _context;
@@ -21,9 +23,10 @@ namespace GestionCentroMedico.Controllers
         // GET: Clientes
         public async Task<IActionResult> Index()
         {
-              return _context.Clientes != null ? 
-                          View(await _context.Clientes.ToListAsync()) :
-                          Problem("Entity set 'GestionTurnosContext.Clientes'  is null.");
+            return _context.Clientes != null ?
+                        View(await _context.Clientes.ToListAsync()) :
+                        Problem("Entity set 'GestionTurnosContext.Clientes'  is null.");
+
         }
 
         // GET: Clientes/Details/5
@@ -92,6 +95,16 @@ namespace GestionCentroMedico.Controllers
             {
                 return NotFound();
             }
+            ViewData["MedId"] = new SelectList(
+              _context.Set<Medico>()
+              .Select(medico => new
+              {
+                  medico.MedId,
+                  MedNombreCompleto = $"{medico.MedApellido}, {medico.MedNombre}"
+              }),
+              "MedId", "MedNombreCompleto");
+            ViewData["MutId"] = new SelectList(_context.Mutuales, "MutId", "MutNombre");
+
             return View(cliente);
         }
 
@@ -102,10 +115,10 @@ namespace GestionCentroMedico.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("CliId,CliNombre,CliApellido,CliEmail,MedId,MutId,CliActivo")] Cliente cliente)
         {
-            if (id != cliente.CliId)
-            {
-                return NotFound();
-            }
+            //if (id != cliente.CliId)
+            //{
+            //    return NotFound();
+            //}
 
             if (ModelState.IsValid)
             {
