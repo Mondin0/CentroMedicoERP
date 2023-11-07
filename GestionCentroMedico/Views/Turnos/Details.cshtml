@@ -11,46 +11,46 @@
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.TurFecha)
+            Fecha:
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.TurFecha)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.TurValor)
+            Valor:
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.TurValor)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.TurPagoEfectivo)
+            Pago efectivo:
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.TurPagoEfectivo)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.TurDescuentaPrepaga)
+            Descuenta prepaga:
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.TurDescuentaPrepaga)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Cli)
+            Cliente
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Cli.CliId)
+            @Model.Cli.CliApellido @Model.Cli.CliNombre
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Med)
+            Médico:
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Med.MedId)
+            @Model.Med.MedApellido @Model.Med.MedNombre
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Mut)
+            Mutual:
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Mut.MutId)
+            @Html.DisplayFor(model => model.Mut.MutNombre)
         </dd>
     </dl>
 </div>

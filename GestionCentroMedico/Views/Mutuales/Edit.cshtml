@@ -14,23 +14,23 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="MutId" />
             <div class="form-group">
-                <label asp-for="MutNombre" class="control-label"></label>
+                <label asp-for="MutNombre" class="control-label">Nombre de la mutual</label>
                 <input asp-for="MutNombre" class="form-control" />
                 <span asp-validation-for="MutNombre" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="MutDescripcion" class="control-label"></label>
+                <label asp-for="MutDescripcion" class="control-label">Descripción</label>
                 <input asp-for="MutDescripcion" class="form-control" />
                 <span asp-validation-for="MutDescripcion" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="MutValor" class="control-label"></label>
+                <label asp-for="MutValor" class="control-label">Valor mensual</label>
                 <input asp-for="MutValor" class="form-control" />
                 <span asp-validation-for="MutValor" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="MutActivo" class="control-label"></label>
-                <input asp-for="MutActivo" class="form-control" />
+            <div class="form-group form-check">
+                <label asp-for="MutActivo" class="control-label">Activa</label>
+                <input asp-for="MutActivo" class="form-check-input" />
                 <span asp-validation-for="MutActivo" class="text-danger"></span>
             </div>
             <div class="form-group">

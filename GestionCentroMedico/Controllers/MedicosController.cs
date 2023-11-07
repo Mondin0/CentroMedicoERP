@@ -91,10 +91,10 @@ namespace GestionCentroMedico.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("MedId,MedNombre,MedApellido,MedEspecialidad,MedMatricula")] Medico medicos)
         {
-            if (id != medicos.MedId)
-            {
-                return NotFound();
-            }
+            //if (id != medicos.MedId)
+            //{
+            //    return NotFound();
+            //}
 
             if (ModelState.IsValid)
             {

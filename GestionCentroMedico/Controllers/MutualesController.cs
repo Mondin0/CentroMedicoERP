@@ -91,10 +91,10 @@ namespace GestionCentroMedico.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("MutId,MutNombre,MutDescripcion,MutValor")] Mutual mutuales)
         {
-            if (id != mutuales.MutId)
-            {
-                return NotFound();
-            }
+            //if (id != mutuales.MutId)
+            //{
+            //    return NotFound();
+            //}
 
             if (ModelState.IsValid)
             {
