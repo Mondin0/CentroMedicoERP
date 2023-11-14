@@ -40,7 +40,7 @@ namespace GestionCentroMedico.Controllers
 
                 await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
                 usuarioDTO.autenticado = true;
-                return RedirectToAction("Privacy", "Home");
+                return RedirectToAction("Index", "Home");
             }
             else
             {

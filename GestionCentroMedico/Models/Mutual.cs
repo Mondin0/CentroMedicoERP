@@ -14,7 +14,7 @@ public partial class Mutual
     [Required]
     public double MutValor { get; set; }
     [Required]
-    public bool? MutActivo { get; set; }
+    public bool MutActivo { get; set; }
 
     public virtual ICollection<Turno> Turnos { get; set; } = new List<Turno>();
 }

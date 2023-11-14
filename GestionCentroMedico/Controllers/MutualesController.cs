@@ -57,7 +57,7 @@ namespace GestionCentroMedico.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("MutId,MutNombre,MutDescripcion,MutValor")] Mutual mutuales)
+        public async Task<IActionResult> Create([Bind("MutId,MutNombre,MutDescripcion,MutValor","MutActivo")] Mutual mutuales)
         {
             if (ModelState.IsValid)
             {
@@ -151,7 +151,7 @@ namespace GestionCentroMedico.Controllers
             {
                 _context.Mutuales.Remove(mutuales);
             }
-
+           
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }

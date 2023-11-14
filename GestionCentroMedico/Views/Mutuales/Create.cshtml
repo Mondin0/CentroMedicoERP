@@ -27,6 +27,11 @@
                 <input asp-for="MutValor" class="form-control" />
                 <span asp-validation-for="MutValor" class="text-danger"></span>
             </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="MutActivo" /> @Html.DisplayNameFor(model => model.MutActivo)
+                </label>
+            </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
